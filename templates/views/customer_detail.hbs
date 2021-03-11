@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Customer Detail</title>
+    <link rel="icon" href="/img/bank.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main_content">
+        <h1>Customer Detail</h1>
+        {{>header}}
+        <br>
+        
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>E-Mail</th>
+                <th>Balance</th>
+                </tr>
+            {{#with data}}
+                <tr>
+                    <td id="sender_id">{{_id}}</td>
+                    <td id="sender_name">{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{balance}}</td>
+                </tr>
+            {{/with}}
+        </table>
+        <br>
+        <div id="transfer_option">
+        <label for="selectlist">Transfer To:</label>
+        <select id="selectlist">
+            <option value="">--Choose an option--</option>
+            {{#each other_customers}}
+                {{#with this}}
+                    <option value="{{_id}}">{{name}}</option>
+                {{/with}}
+            {{/each}}
+        </select>
+        </div>
+        <br><br>
+        <form id="transfer">
+            <input id="amount" type="number" placeholder="Enter amount">
+            <button>Transfer</button>
+        </form>
+    </div>
+
+
+    {{>footer}}
+
+    <script src="/js/transfer.js"></script>
+</body>
+
+</html>

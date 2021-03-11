@@ -1,0 +1,87 @@
+body {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 96vh;
+}
+
+.main_content {
+    flex-grow: 1;
+}
+
+#homepagetitle {
+    background: rgb(255, 255, 255);
+    padding: 16px;
+    border: 1px solid #888;
+}
+
+footer {
+    color: #888;
+    border-top: 1px solid #eee;
+    margin-top: 16px;
+    margin-bottom: 50px;
+    padding: 16px 0;
+}
+
+footer a {
+    margin-left: 2px;
+    margin-right: 48px;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+header a {
+    color: #888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888;
+    background: #888;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+table {
+    display: table;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+    background: #888;
+    color: white;
+}
+
+td {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#transfer_option {
+    margin: 46px 0 23px;
+}
+
+img {
+    height: 20px;
+    width: 20px;
+}

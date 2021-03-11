@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Transfer History</title>
+    <link rel="icon" href="/img/bank.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main_content">
+        <h1>History</h1>
+        {{>header}}
+        <br>
+        
+        <table id="history_table">
+            <tr>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th>Amount</th>
+                <th>Date&Time</th>
+            </tr>
+            {{#each data}}
+                {{#with this}}
+                    <tr>
+                        <td>{{sender}}</td>
+                        <td>{{receiver}}</td>
+                        <td>{{amount}}</td>
+                        <td>{{createdAt}}</td>
+                    </tr>
+                {{/with}}
+            {{/each}}
+        </table>
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>
