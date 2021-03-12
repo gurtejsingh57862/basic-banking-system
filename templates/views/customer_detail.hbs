@@ -26,7 +26,7 @@
                     <td id="sender_id">{{_id}}</td>
                     <td id="sender_name">{{name}}</td>
                     <td>{{email}}</td>
-                    <td>{{balance}}</td>
+                    <td id="sender_balance">{{balance}}</td>
                 </tr>
             {{/with}}
         </table>
@@ -34,7 +34,7 @@
         <div id="transfer_option">
         <label for="selectlist">Transfer To:</label>
         <select id="selectlist">
-            <option value="">--Choose an option--</option>
+            <option value="invalid">--Choose an option--</option>
             {{#each other_customers}}
                 {{#with this}}
                     <option value="{{_id}}">{{name}}</option>
