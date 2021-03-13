@@ -85,3 +85,12 @@ img {
     height: 20px;
     width: 20px;
 }
+
+#homepage_button {
+    text-align: center;
+    margin: 50px auto;
+}
+
+#homepage_button button {
+    margin-bottom: 50px;
+}
