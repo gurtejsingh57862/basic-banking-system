@@ -12,11 +12,11 @@ form.addEventListener('submit', (e) => {
         return alert("Please select an Option")
     }
 
-    if (amount.value <= 0) {
+    if (+amount.value <= 0) {
         return alert("Please enter a valid amount")
     }
 
-    if (amount.value > sender_balance.innerHTML) {
+    if (+amount.value > +sender_balance.innerHTML) {
         return alert(`${sender_name.innerHTML}: "I don't have that much balance!"`)
     }
 
@@ -47,7 +47,7 @@ form.addEventListener('submit', (e) => {
     const data = {
         sender: sender_name.innerHTML,
         receiver: select.options[select.selectedIndex].text,
-        amount: amount.value
+        amount: +amount.value
     }
     const options = {
         method: 'POST',
