@@ -59,4 +59,6 @@ form.addEventListener('submit', (e) => {
     fetch('/transaction', options)
 
     window.alert(`Transaction done from ${sender_name.innerHTML} to ${select.options[select.selectedIndex].text}`)
+
+    location.href = "/history"
 })
