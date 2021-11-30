@@ -18,7 +18,7 @@ const customerSchema = new mongoose.Schema({
     },
     balance: {
         type: Number,
-        degfault: 0
+        default: 0
     }
 })
 
